@@ -29,11 +29,42 @@ function playRound(humanChoice, computerChoice) {
       } else if (computerChoice == "rock") {
         console.log("Thats a Tie!");
       } else {
-        console.log("Player Wins, Rock wins agains Scissors");
+        console.log("Player Wins, Rock wins against Scissors");
         humanScore++;
       }
+      break;
+    case "PAPER":
+      if (computerChoice == "paper") {
+        console.log("Thats a Tie!");
+      } else if (computerChoice == "rock") {
+        console.log("Player Wins, Paper wins against Rocks");
+        humanScore++;
+      } else {
+        console.log("Computer Wins, Paper loses against Scissors");
+        computerScore++;
+      }
+      break;
+    case "SCISSORS":
+      if (computerChoice == "paper") {
+        console.log("Player Wins, Paper wins against Rocks");
+        humanScore++;
+      } else if (computerChoice == "rock") {
+        console.log("Computer Wins, Paper loses against Rock");
+        computerScore++;
+      } else {
+        console.log("Thats a Tie!");
+      }
+      break;
   }
 }
 
-playRound(getHumanChoice(), "paper");
-console.log(humanScore);
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(
+      `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n\n`
+    );
+  }
+}
+
+playGame();
