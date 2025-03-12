@@ -5,9 +5,44 @@ img {
 }
 
 .container {
-  height: 30vh;
+  margin: 9% 9% 1%;
   display: flex;
   gap: 3%;
   align-items: center;
   justify-content: center;
+}
+
+.btn-img {
+  border: none;
+}
+
+.cont {
+  justify-content: space-evenly;
+  display: flex;
+  direction: row;
+}
+
+.score-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreHuman {
+  font-size: 60px;
+  text-align: center;
+  align-content: center;
+  border: 2px solid black;
+  background-color: cadetblue;
+  height: 100px;
+  width: 90px;
+}
+.scoreCPU {
+  font-size: 60px;
+  text-align: center;
+  align-content: center;
+  border: 2px solid black;
+  background-color: cadetblue;
+  height: 100px;
+  width: 90px;
 }

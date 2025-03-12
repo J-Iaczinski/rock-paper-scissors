@@ -3,25 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
     <div class="container">
       <button class="btn-img">
-        <img src="static/images/images.png" class="square" id="rock" />
+        <img src="static/images/images.png" alt="" class="square" id="rock" />
       </button>
       <button class="btn-img">
         <img
           src="static/images/crumpled-paper-ball-illustration-isolated-on-horizontal-white-background-simple-flat-outlined-cartoon-drawing-of-unused-wrinkled-paper-roll-for-illustrating-frustration-and-unused-ideas-free-vector.jpg"
+          alt=""
           class="square"
           id="paper"
         />
       </button>
       <button class="btn-img">
-        <img src="static/images/images (1).png" class="square" id="scissors" />
+        <img src="static/images/images (1).png" alt="" class="square" id="scissors" />
       </button>
+    </div>
+    <div class="cont">
+      <div class="score-cont">
+        <h2>HUMAN SCORE</h2>
+        <div class="square scoreHuman">0</div>
+      </div>
+      <div class="score-cont">
+        <h2>COMPUTER SCORE</h2>
+        <div class="square scoreCPU">0</div>
+      </div>
     </div>
   </body>
 </html>
