@@ -56,29 +56,25 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  btns.forEach((bt) => {
-    bt.addEventListener("click", (e) => {
-      let humanChoice = e.target.id;
-      let computerChoice = getComputerChoice();
-      playRound(humanChoice, computerChoice);
-      if (humanScore === 5) {
-        console.clear();
-        alert("HUMAN WINS!! \n\n");
-        humanScore = 0;
-        computerScore = 0;
-        document.querySelector(".scoreHuman").innerHTML = `${humanScore}`;
-        document.querySelector(".scoreCPU").innerHTML = `${computerScore}`;
-      } else if (computerScore === 5) {
-        console.clear();
-        alert("COMPUTER WINS!! \n\n");
-        humanScore = 0;
-        computerScore = 0;
-        document.querySelector(".scoreHuman").innerHTML = `${humanScore}`;
-        document.querySelector(".scoreCPU").innerHTML = `${computerScore}`;
-      }
-    });
+btns.forEach((bt) => {
+  bt.addEventListener("click", (e) => {
+    let humanChoice = e.target.id;
+    let computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+    if (humanScore === 5) {
+      console.clear();
+      alert("HUMAN WINS!! \n\n");
+      humanScore = 0;
+      computerScore = 0;
+      document.querySelector(".scoreHuman").innerHTML = `${humanScore}`;
+      document.querySelector(".scoreCPU").innerHTML = `${computerScore}`;
+    } else if (computerScore === 5) {
+      console.clear();
+      alert("COMPUTER WINS!! \n\n");
+      humanScore = 0;
+      computerScore = 0;
+      document.querySelector(".scoreHuman").innerHTML = `${humanScore}`;
+      document.querySelector(".scoreCPU").innerHTML = `${computerScore}`;
+    }
   });
-}
-
-playGame();
+});
